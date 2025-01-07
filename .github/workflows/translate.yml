@@ -1,0 +1,52 @@
+name: AI Translation Workflow
+
+on:
+  pull_request:
+    paths:
+      - "**/locales/*.json"
+    types: [opened, synchronize]
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+
+    env:
+      OPENAI_SECRET_KEY: ${{ secrets.OPENAI_SECRET_KEY }}
+      SOURCE_LANG: "en" # Add your source locale here (E,g, 'en')
+      TARGET_LANGS: "pt-br,es" # Add your target locales here in CSV format (E.g. 'pt-br,es,fr')
+      LOCALES_ROOT_PATH: "." # Add the path to your "locales" folder here
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Setup Git User
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install axios fs-extra openai lodash
+
+      - name: Run translation script
+        run: node .github/scripts/translate.js
+
+      - name: Commit and push if changes exist
+        run: |
+          echo "Checking for changes in translations..."
+          if [[ -n "$(git status --porcelain $LOCALES_ROOT_PATH/locales/)" ]]; then
+            echo "Found changes in locale files, committing..."
+            git add $LOCALES_ROOT_PATH/locales/*.json
+            git status
+            git commit -m "chore: update translations for target languages"
+            git push origin HEAD
+          else
+            echo "No translation changes detected"
+          fi
