@@ -3,6 +3,7 @@
   "description": "Este es un ejemplo simple de un componente React con soporte para i18n.",
   "home": {
     "title": "Bienvenido al Flujo de Trabajo de Traducción de IA",
-    "description": "Este es un ejemplo simple de un componente React con soporte para i18n."
+    "description": "Este es un ejemplo simple de un componente React con soporte para i18n.",
+    "test": "Esta es una prueba"
   }
 }
