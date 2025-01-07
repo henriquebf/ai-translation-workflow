@@ -1,6 +1,8 @@
 # AI Translation Workflow
 
-Automate locale translations in `JSON` format for your Github Project, in **Pull Requests**, using OpenAI:
+Automate locale translations in `JSON` format for your Github Project, in **Pull Requests**, using OpenAI.
+
+![image](https://github.com/user-attachments/assets/880f1158-6727-43c8-a5fb-f1f69e13d4a6)
 
 **Features:**
 
