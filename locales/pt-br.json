@@ -1,0 +1,8 @@
+{
+  "title": "Olá, Mundo!",
+  "description": "Este é um exemplo simples de um componente React com suporte a i18n.",
+  "home": {
+    "title": "Bem-vindo ao Fluxo de Trabalho de Tradução por IA",
+    "description": "Este é um exemplo simples de um componente React com suporte a i18n."
+  }
+}
