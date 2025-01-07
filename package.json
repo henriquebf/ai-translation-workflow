@@ -1,0 +1,11 @@
+{
+  "name": "ai-translation-workflow",
+  "version": "1.0.0",
+  "description": "Github Workflow to generate translations using AI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquebf/ai-translation-workflow.git"
+  },
+  "author": "Henrique Ferreira",
+  "license": "MIT"
+}
