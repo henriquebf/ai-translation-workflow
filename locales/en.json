@@ -1,0 +1,8 @@
+{
+  "title": "Hello, World!",
+  "description": "This is a simple example of a React component with i18n support.",
+  "home": {
+    "title": "Welcome to the AI Translation Workflow",
+    "description": "This is a simple example of a React component with i18n support."
+  }
+}
