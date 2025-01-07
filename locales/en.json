@@ -3,6 +3,7 @@
   "description": "This is a simple example of a React component with i18n support.",
   "home": {
     "title": "Welcome to the AI Translation Workflow",
-    "description": "This is a simple example of a React component with i18n support."
+    "description": "This is a simple example of a React component with i18n support.",
+    "test": "This is a test"
   }
 }
