@@ -1,6 +1,6 @@
 # AI Translation Workflow
 
-Automate locale translations in `JSON` format for your Github Project, in **Pull Requests**, using OpenAI.
+Automate locale translations in `i18n` format for your Github Project, inside the **Pull Requests**, using OpenAI.
 
 ![image](https://github.com/user-attachments/assets/880f1158-6727-43c8-a5fb-f1f69e13d4a6)
 
@@ -11,13 +11,13 @@ Automate locale translations in `JSON` format for your Github Project, in **Pull
 
 **Important Note:**
 
-When you simply change the text in the Source locale file, it **intentionally does not** update the target. So in this case it is necessary to translate the changes manually.
+When you simply change the text in the Source locale file, it **intentionally does not** update the target. So in this case it is necessary to translate the changes manually. This is intentional as it is not desirable to rewrite translation text that might be tweaked directly in the target files.
 
 ## Getting Started
 
 This repository contains workflow file and script that can be imported into your own repository to get the AI Translation Workflow working. Please follow the instructions below to get your translation API and repository ready.
 
-- Clone this repository and copy the `.github` in your project.
+- Clone this repository and copy the `.github` folder into your project.
 - Generate an secret key in [OpenAI Dashboard](https://platform.openai.com/api-keys).
 - Add secret key to your github repository:
   1.  On GitHub, navigate to the main page of the repository.
