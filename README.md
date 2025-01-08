@@ -9,9 +9,7 @@ Automate locale translations in `i18n` format for your Github Project, inside th
 - Generates any missing text from Sorce to Target locale files.
 - Removes obsolete text in Target locale files when removed in Source.
 
-**Important Note:**
-
-When you simply change the text in the Source locale file, it **intentionally does not** update the target. So in this case it is necessary to translate the changes manually. This is intentional as it is not desirable to rewrite translation text that might be tweaked directly in the target files.
+💡 When you change a text that already exists in target locale files, those are intentionally **not** translated. In case you wish to apply those translations, please manually remove the corresponding texts from target locale files.
 
 ## Getting Started
 
